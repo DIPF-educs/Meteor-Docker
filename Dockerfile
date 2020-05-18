@@ -5,3 +5,5 @@ RUN set -x \
  && useradd -m -G users -s /bin/bash meteor
 
 USER meteor
+
+ENTRYPOINT ["/bin/bash"]
