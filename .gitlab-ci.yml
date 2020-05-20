@@ -2,8 +2,6 @@ build:
   image: docker:19.03.1
   tags:
     - docker builder
-  variables:
-    VERSION:
   script:
     - export TAG_NAME=$CI_REGISTRY_IMAGE:${VERSION:-latest}
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
