@@ -9,4 +9,4 @@ build:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build --no-cache -t $TAG_NAME --build-arg VERSION=$VERSION .
     - docker push $TAG_NAME
-  
+  when: manual  
